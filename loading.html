@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YUPI Loading Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Titan+One&family=Open+Sans:wght@400;700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #fbc130;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+        }
+
+        header {
+            background-color: #007b70;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            width: 70px;
+            margin-right: 20px;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            font-family: 'Titan One', cursive;
+            font-size: 36px;
+            color: #000;
+        }
+
+        .title span {
+            font-family: 'Fredoka One', cursive;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Titan One', cursive;
+            font-size: 100px;
+            color: #000;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 36px;
+            color: #000;
+            margin: 0;
+        }
+
+        .loading {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .loading img {
+            width: 50px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="yupilogo.png" alt="YUPI Logo" class="logo">
+            <div class="title">
+                YUPI <span>LOADING PAGE</span>
+            </div>
+        </header>
+        <main>
+            <h1>Welcome to</h1>
+            <h1>YUPI</h1>
+            <h2>University of the Philippines - Mindanao</h2>
+            <h2>Library Log</h2>
+            <div class="loading">
+                <p>Loading...</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

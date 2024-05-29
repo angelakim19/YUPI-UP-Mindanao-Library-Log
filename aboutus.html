@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arya&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arya&family=Jaro:opsz@6..72&family=Marmelad&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arya&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jaro:opsz@6..72&family=Marmelad&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <title>YUPI-About Us</title>
+  <link rel="stylesheet" href="rawfront.css">
+  <style>
+
+    .user-photo {
+      width: 40px;
+      height: 40px;
+      border: 2px solid rgb(246, 241, 241); 
+      border-radius: 50%; 
+      margin-right: 30px; 
+      cursor: pointer;
+    }
+
+    .about-us {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+    }
+
+    .about-us a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      margin-right: 20px;
+      font-family: Arial, sans-serif;
+      font-weight: bold; 
+    }
+
+    h1 {
+      margin-top: 120px;
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    .section-background {
+      background-image: url('43.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;
+      padding: 20px;
+      min-height: 100vh; /* Make sure the section is at least the height of the viewport */
+    }
+
+    .section-black {
+      background-image: url('47.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;
+      padding: 20px;
+      min-height: 100vh; /* Make sure the section is at least the height of the viewport */
+    }
+
+    .green-container {
+      background-color: #14533c; /* Green */
+      color: white;
+      padding: 1px 5px;
+      text-align: left;
+      width: 50%; /* Adjust the width as needed */
+      margin-left: -20px;
+      display: flex;
+      align-self: center;
+    }
+
+    .title {
+      text-align: left;
+      font-family: "Quiapo", sans-serif;
+      color: maroon;
+      font-size: 100px;
+      letter-spacing: 15px;
+      margin-left: 90px;
+      margin-bottom: 20px;
+      margin-top: 120px;
+    }
+    
+    .subtitle {
+      font-size: 23px; /* Adjust the font size as needed */
+      margin-bottom: 12px;
+      font-style: italic;
+      margin-left:  10px;
+    }
+
+    .logo-image {
+      width: 1400px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+      margin-top: 60px;
+    }
+
+    .description {
+      margin-top: 200px;
+      font-size: 20px;
+      text-align: center;
+      font-style: italic;
+      font-weight: 900;
+      font-family: "Oswald", sans-serif;
+      color: rgb(54, 19, 19);
+      margin-bottom: 120px;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -80px;
+      gap: 60px;
+    }
+
+    .image-wrapper {
+      margin: 0 10px;
+      position: relative;
+      text-align: center;
+    }
+
+    .image-wrapper img {
+      width: 350px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .image-wrapper:hover img {
+      transform: scale(1.1);
+    }
+
+    .image-description {
+      display: none;
+      background-color: rgb(51, 1, 1);
+      color: white;
+      padding: 20px;
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+      border-radius: 12px;
+      font-family: "Barlow", sans-serif;
+    }
+
+    .image-wrapper:hover .image-description {
+      display: block;
+    }
+
+    .user-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(188, 113, 113, 0.2);
+      z-index: 1;
+      border-radius: 20px;
+      margin-left: -50px;
+      margin-top: 5px;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      
+    }
+
+    .dropdown-content a:hover {
+      background-color: #8b1f1f;
+      border-radius: 20px;
+    }
+
+    .user-dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-text">
+      <a href="index.html">
+        <div class="logo-container"></div>
+      </a>
+        <div class="header-title">
+            <h1>YUPI</h1>
+            <h5>UP Mindanao Library Log</h5>
+        </div>
+    </div>
+    <div class="header-buttons">
+        <button type="button" onclick="redirectToHome()">Home</button>
+
+    </div>
+  </header>
+  <section class="section-background">
+    <h1 class="title">ABOUT US</h1>
+    <div class="green-container">
+      <p class="subtitle">YUPI; The University of the Philippines Mindanao Library Log</p>
+    </div>
+    <img src="about us.png" alt="YUPi University Library Logo" class="logo-image">
+  </section>
+
+  <section class="section-black">
+    <p class="description">Meet the web designers, a group of first-year Computer Science students from the University of the Philippines Mindanao. These aspiring students are driven in creating visually <br> appealing and user-friendly projects, who aims to make a difference and impart projects to make todayy's digital world better.</p>
+      <div class="image-container">
+        <div class="image-wrapper">
+          <img src="quennie.png" alt="Image 2">
+          <p class="image-description">Quennie A. Nebria, a 19-year-old graduate from Tugbok National High School, who's passionate about technology, particularly UI/UX design and web development. Currently, Quennie is focused on mastering dynamic database management, proper algorithms, and relevant mathematical theorems. With this diverse skill set, Quennie shows promise in excelling across various aspects of software development, poised to make significant contributions to the tech industry.</p>
+        </div>
+        <div class="image-wrapper">
+          <img src="angela.png" alt="Image 1">
+          <p class="image-description">Angela Kim Ruchina Masong, a 19-year-old graduate from Valencia National High School in 2023, exhibits a diverse skill set including HTML, CSS, JavaScript, PHP, SQL, C, Python, C++, Photoshop, and video editing. With a keen interest in various tech domains such as web development, UI/UX design, database administration, IT support, and cybersecurity, Angela is currently sharpening her expertise in JavaScript and PHP, eager to delve deeper into these realms.</p>
+        </div>
+        <div class="image-wrapper">
+          <img src="chello.png" alt="Image 3">
+          <p class="image-description">Chello G. Serion, a 19-year-old student from St. John Paul II College of Davao. She hasn't specified any particular skills or interests in technology, they are currently focusing on learning PHP and MySQL. This suggests a budding interest or potential career path in web development or database management. She could unlock a world of opportunities in the tech industry, whether it's building dynamic websites, creating powerful web applications, or managing databases for various purposes.</p>
+        </div>
+      </div>
+    </section>    
+  </section>
+
+  <footer id="footer">
+    <div class="fleft">
+        <img src="Oble2.png" alt="Oblation2" class="oble2">
+        <img src="UPMInLogo.png" alt="UP Mindanao Logo" class="fupmlogo">
+        <img src="yupilogo.png" alt="YUPI Logo" class="fyupilogo">
+    </div>
+
+    <div class="fmiddle">
+        <h3>University of the Philippines Mindanao</h3>
+        <h5>The University Library, UP Mindanao, Mintal, Tugbok District, Davao City, Philippines</h5>
+        <h5>Contact: (082)295-7025</h5>
+        <h5>Email: library.upmindanao@up.edu.ph</h5>
+
+        <h5>&copy; 2024 University Library, University of the Philippines Mindanao. All Rights Reserved.</h5>
+    </div>
+
+    <div class="fright">
+        <h4>Quick List</h4>
+        <a href="https://alarm.upmin.edu.ph/" >UP Mindanao ALARM</a>
+    </div>
+  </footer>
+
+  <script>function redirectToHome() {
+    window.location.href = 'index.html';
+}</script>
+</body>
+</html>

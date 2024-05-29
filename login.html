@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to YUPi University Library</title>
+  <link rel="stylesheet" href="rawfront.css">
+    <script> function redirectToRegister() {
+      window.location.href = 'register.html'; 
+  }
+
+  function redirectToLogin() {
+      window.location.href = 'login.html'; 
+  }
+
+  function redirectToAboutUs() {
+      window.location.href = 'aboutus.html'; 
+  }
+
+  function redirectToHome() {
+      window.location.href = 'index.html';
+  }</script>
+  <style>
+    .oblation-img {
+        position: absolute;
+        top: 30px;
+        right: 250px;
+        z-index: -1;
+        width: 1000px;
+        height: auto;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    .bungad h2:nth-child(2) {
+        text-align: center;
+        width: 50%;
+        color: white;
+        font-family: 'Quiapo', sans-serif;
+        font-size: 130px;
+        line-height: 0;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .login-container {
+        width: 35%;
+        background-color: #f8dd8aa1;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        top: 200px;
+        right: 100px;
+    }
+
+    .input-container {
+        margin-bottom: 20px;
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-container input {
+        padding: 10px;
+        width: 85%;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-top: 2px;
+    }
+
+    .login-container p {
+        text-align: center;
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .buttons-container button {
+        padding: 10px 20px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        background-color: #08542a;
+        color: #fff;
+        transition: background-color 0.3s;
+    }
+
+    .buttons-container button:hover {
+        background-color: #b11e2a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-text">
+      <a href="index.html">
+        <div class="logo-container"></div>
+      </a>
+      <div class="header-title">
+        <h1>YUPI</h1>
+        <h5>UP Mindanao Library Log</h5>
+      </div>
+    </div>
+    <div class="header-buttons">
+      <button type="button" onclick="redirectToRegister()">Register</button>
+      <button type="button" onclick="redirectToLogin()">Log In</button>
+      <button type="button" onclick="redirectToAboutUs()">About Us</button>
+    </div>
+  </header>
+
+  <div class="bungad">
+    <h3>Welcome back</h3>
+    <h2>to</h2>
+    <h1>YUPI</h1>
+
+    <img src="Oble.png" alt="Oblations" class="oblation-img">
+
+    <div class="login-container">
+      <form id="loginForm" method="POST" action="login.php">
+        <div class="input-container">
+          <input type="email" id="email" name="email" placeholder="Enter your email">
+        </div>
+        <div class="input-container">
+          <input type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+        <p>No account yet? <a href="register.html">Register</a></p>
+        <div class="buttons-container">
+          <button type="button" onclick="window.location.href='index.html'">Cancel</button>
+          <button type="submit">Log In</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="fleft">
+      <img src="Oble2.png" alt="Oblation2" class="oble2">
+      <img src="UPMInLogo.png" alt="UP Mindanao Logo" class="fupmlogo">
+      <img src="yupilogo.png" alt="YUPI Logo" class="fyupilogo">
+    </div>
+
+    <div class="fmiddle">
+      <h3>University of the Philippines Mindanao</h3>
+      <h5>The University Library, UP Mindanao, Mintal, Tugbok District, Davao City, Philippines</h5>
+      <h5>Contact: (082)295-7025</h5>
+      <h5>Email: library.upmindanao@up.edu.ph</h5>
+
+      <h5>&copy; 2024 University Library, University of the Philippines Mindanao. All Rights Reserved.</h5>
+    </div>
+
+    <div class="fright">
+      <h4>Quick List</h4>
+      <a href="https://alarm.upmin.edu.ph/">UP Mindanao ALARM</a>
+    </div>
+  </footer>
+</body>
+</html>
