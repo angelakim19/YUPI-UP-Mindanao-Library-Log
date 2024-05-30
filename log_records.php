@@ -2,7 +2,7 @@
 // Database connection parameters
 $servername = "localhost";
 $username = "root";
-$password = "your_password";
+$password = "";
 $dbname = "registration_db";
 
 // Create connection
@@ -80,44 +80,35 @@ $result = $conn->query($sql);
             margin-left: 50px;
         }
 
-        form {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
         .table-container {
-            display: flex; /* Use flexbox for centering */
-            justify-content: center; /* Center content horizontally */
-            overflow: auto;
-            max-width: 95%;
-            margin: 0 auto; /* Center the container itself */
-            border: 1px solid black;
-            margin-bottom: -3-40px;
-            max-height: 100%;
+            width: 40%; /* Adjust the width of the container */
+            margin: 0 auto; /* Center the table container */
         }
+        
 
         table {
-            width: 100%; /* Fixed width */
+            width: 100%;
             border-collapse: collapse;
-            margin-left: 150px;
-            
-        }
-
-        th, td {
-            border: 1px solid black;
-            padding: 15px;
-            text-align: left;
+            justify-content: center;
             font-size: 14px;
+            margin-left: -415px;
         }
 
+        table, th, td {
+            border: 1px solid black;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        
         th {
             background-color: #f2f2f2;
         }
-
+        
         tr {
-            background-color: #f1f1f1;
+            background-color: #f9f9f9;
         }
 
         .buttons {
@@ -150,7 +141,7 @@ $result = $conn->query($sql);
 <body>
     <header>
         <div class="header-text">
-            <a href="admin_loginlandingpage.html">
+            <a href="admin_dashboard.html">
                 <div class="logo-container"></div>
             </a>
             <div class="header-title">

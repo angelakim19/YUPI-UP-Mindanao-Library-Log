@@ -2,7 +2,7 @@
 // Database connection parameters
 $servername = "localhost";
 $username = "root";
-$password = "your_password";
+$password = "";
 $dbname = "registration_db";
 
 // Create connection

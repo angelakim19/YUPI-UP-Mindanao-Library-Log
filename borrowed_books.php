@@ -15,7 +15,8 @@ $sql = "SELECT borrowed_books.id, users.lastname, users.firstname, users.middlen
 $result = $conn->query($sql);
 ?>
 
-<h2>Borrowed Books</h2>
+<h1>Borrowed Books</h1>
+<div class="table-container">
 <form id="borrowedBooksForm" action="process_books.php" method="post">
     <table border="1">
         <tr>
@@ -61,15 +62,17 @@ $result = $conn->query($sql);
         </tr>
         <?php endwhile; ?>
     </table>
-    <br>
+    <div class="buttons2">
     <button type="submit" name="action" value="edit">Edit Selected</button>
-   
     <button type="submit" name="action" value="delete">Delete Selected</button>
-</form>
+    </div>
 
+    <div class="buttons3">
     <button onclick="location.href='add_book.php'">Add Book Borrowed</button>
+    <input type="button" onclick="window.location.href='admin_dashboard.html'" value="Back to Admin Dashboard">
+    </div>
 </form>
-<button onclick="location.href='admin_dashboard.html'">Back to Admin Dashboard</button>
+</div>
 
 <?php
 $conn->close();

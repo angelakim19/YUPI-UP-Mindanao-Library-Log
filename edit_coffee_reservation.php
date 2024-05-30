@@ -2,7 +2,7 @@
 // Database connection parameters
 $servername = "localhost";
 $username = "root";
-$password = "your_password";
+$password = "";
 $dbname = "registration_db";
 
 // Create connection
@@ -146,7 +146,7 @@ $conn->close();
 <body>
     <header>
         <div class="header-text">
-            <a href="admin_loginlandingpage.html">
+            <a href="admin_dashboard.html">
             <div class="logo-container"></div>
             </a>
             <div class="header-title">

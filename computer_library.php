@@ -88,7 +88,7 @@
 
     <header>
         <div class="header-text">
-            <a href="admin_loginlandingpage.html">
+            <a href="admin_dashboard.html">
                 <div class="logo-container"></div>
             </a>
             <div class="header-title">
@@ -203,7 +203,7 @@
     </table>
     <div class="buttons">
         <button onclick="window.location.href = 'admin_dashboard.html'">Admin Dashboard</button>
-        <button onclick="window.location.href = 'library_places.html'">Libraray Spaces</button>
+        <button onclick="window.location.href = 'library_places.html'">Library Spaces</button>
     </div>
 
     <footer id="footer">

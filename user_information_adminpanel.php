@@ -53,12 +53,16 @@ $result = $conn->query($sql);
             margin-left: 50px;
         }
 
+        .table-container {
+            width: 80%; /* Adjust the width of the container */
+            margin: 0 auto; /* Center the table container */
+        }
+
         table {
-            width: 30%;
+            width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            margin-left: auto; /* Adjusted to auto */
-            margin-right: 20px; /* Added margin-right */
+            justify-content: center;
+            font-size: 15px;
         }
 
         table, th, td {
@@ -74,12 +78,8 @@ $result = $conn->query($sql);
             background-color: #f2f2f2;
         }
 
-        tr:nth-child(even) {
+        tr {
             background-color: #f9f9f9;
-        }
-
-        tr:hover {
-            background-color: #f1f1f1;
         }
 
         .buttons {
@@ -140,7 +140,7 @@ $result = $conn->query($sql);
 <body>
     <header>
         <div class="header-text">
-            <a href="admin_loginlandingpage.html">
+            <a href="admin_dashboard.html">
                 <div class="logo-container"></div>
             </a>
             <div class="header-title">
@@ -157,7 +157,8 @@ $result = $conn->query($sql);
     <h1>User Information</h1>
 
     <img src="pattern4.png" alt="Pattern4" class="pattern4">
-
+    
+    <div class="table-container">
     <form action="perform_actions.php" method="post">
         <table border="1">
             <tr>
@@ -172,7 +173,6 @@ $result = $conn->query($sql);
                 <th>Program</th>
                 <th>Position</th>
                 <th>Phone Number</th>
-                <th>Password</th>
             </tr>
             <?php while($row = $result->fetch_assoc()): ?>
             <tr>
@@ -187,7 +187,6 @@ $result = $conn->query($sql);
                 <td><?php echo $row['program']; ?></td>
                 <td><?php echo $row['position']; ?></td>
                 <td><?php echo $row['phonenumber']; ?></td>
-                <td><?php echo $row['password']; ?></td>
             </tr>
             <?php endwhile; ?>
         </table>
@@ -200,6 +199,7 @@ $result = $conn->query($sql);
         </div>
         
     </form>
+    </div>
 
     <footer id="footer">
         <div class="fleft">

@@ -27,21 +27,123 @@
             margin-left: 80px;
         }
 
-        .buttons {
-            display: flex;
-            justify-content: left;
-            gap: 30px;
-            padding: 100px;
+        .table-container {
+            width: 90%; /* Adjust the width of the container */
+            margin: 0 auto; /* Center the table container */
         }
-
-        .buttons button {
-            padding: 20px;
-            border-radius: 10px; /* Adding border radius */
-            transition: background-color 0.3s ease; /* Adding transition effect for smooth hover */
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            justify-content: center;
+            font-size: 15px;
+        }
+        
+        table, th, td {
+            border: 1px solid black;
+        }
+        
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tr {
+            background-color: #f9f9f9;
+        }
+        
+        .buttons {
+            margin: 20px 20px; /* Adjusted margin */
+            display: flex; /* Use flexbox for alignment */
+            justify-content: center; /* Align items to the start (left side) */
+        }
+        
+        .buttons button{
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #535151;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
         }
         
         .buttons button:hover {
-            background-color: #ccc; /* Change background color on hover */
+            background-color: #45a049;
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .buttons2 {
+            margin: 20px 20px; /* Adjusted margin */
+            display: flex; /* Use flexbox for alignment */
+            justify-content: flex-end; /* Align items to the end (right side) */
+        }
+        
+        .buttons2 button{
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #535151;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .buttons2 button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .buttons3 {
+            margin: 20px 20px; /* Adjusted margin */
+            display: flex; /* Use flexbox for alignment */
+            justify-content: flex-end; /* Align items to the start (left side) */
+        }
+        
+        .buttons3 button{
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #535151;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .buttons3 button:hover {
+            background-color: #0a0a09;
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .buttons3 input{
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #535151;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .buttons3 input:hover {
+            background-color: #0a0a09;
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
 
 
@@ -85,7 +187,7 @@
 <body>
     <header>
         <div class="header-text">
-            <a href="admin_loginlandingpage.html">
+            <a href="admin_dashboard.html">
                 <div class="logo-container"></div>
             </a>
             <div class="header-title">

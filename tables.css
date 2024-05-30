@@ -1,0 +1,53 @@
+.table-container {
+    width: 80%; /* Adjust the width of the container */
+    margin: 0 auto; /* Center the table container */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    justify-content: center;
+    font-size: 15px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr {
+    background-color: #f9f9f9;
+}
+
+.buttons {
+    margin: 20px 20px; /* Adjusted margin */
+    margin-left: auto; /* Move buttons to the right */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-end; /* Align items to the end (right side) */
+}
+
+.buttons input {
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #535151;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.buttons input:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
