@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to YUPi University Library</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    h3, h1, h2 {
+    text-align: center;
+    font-family: 'Quiapo', sans-serif;
+    } 
+
+    h1 {
+        margin-top: 120px;
+        font-size: 88px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 24px;
+        margin-top: 10px;
+        text-align: center;
+        font-family: 'OpenSans', san-serif;
+
+    }
+
+    .arrow-button {
+        margin-top: 50px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: #14533c;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s;
+    }
+
+    .arrow-button:hover {
+        transform: scale(1.1);
+    }
+
+    .arrow-button:active {
+        transform: scale(0.9);
+    }
+
+    .arrow-button svg {
+        fill: white;
+        width: 24px;
+        height: 24px;
+        transform: rotate(90deg);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-text">
+        <a href="index.html">
+            <div class="logo-container"></div>
+        </a>
+        <div class="header-title">
+            <h1>YUPI</h1>
+            <h5>UP Mindanao Library Log</h5>
+        </div>
+    </div>
+    <div class="header-buttons">
+        <button type="button" onclick="redirectToUserProfile()">Home</button>
+        <button type="button" onclick="redirectToAboutUs()">About Us</button>
+    </div>
+  </header>
+  
+  <h1>Welcome to YUPi University Library</h1>
+  <p>Your gateway to knowledge and resources</p>
+
+  <button class="arrow-button" onclick="window.location.href='userprofile.php'">
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2L3 13h6v7h6v-7h6L12 2z"/>
+    </svg>
+  </button>
+
+  <footer id="footer">
+    <div class="fleft">
+        <img src="Oble2.png" alt="Oblation2" class="oble2">
+        <img src="UPMInLogo.png" alt="UP Mindanao Logo" class="fupmlogo">
+        <img src="yupilogo.png" alt="YUPI Logo" class="fyupilogo">
+    </div>
+
+    <div class="fmiddle">
+        <h3>University of the Philippines Mindanao</h3>
+        <h5>The University Library, UP Mindanao, Mintal, Tugbok District, Davao City, Philippines</h5>
+        <h5>Contact: (082)295-7025</h5>
+        <h5>Email: library.upmindanao@up.edu.ph</h5>
+
+        <h5>&copy; 2024 University Library, University of the Philippines Mindanao. All Rights Reserved.</h5>
+    </div>
+
+    <div class="fright">
+        <h4>Quick List</h4>
+        <a href="https://alarm.upmin.edu.ph/" >UP Mindanao ALARM</a>
+    </div>
+</footer>
+
+</body>
+</html>
