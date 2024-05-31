@@ -130,7 +130,7 @@ $profilePicture = isset($_SESSION['profile_picture']) ? htmlspecialchars($_SESSI
 
     .profile-info {
       text-align: left;
-      color: black;
+      color: white;
     }
 
     .profile-info h2 {

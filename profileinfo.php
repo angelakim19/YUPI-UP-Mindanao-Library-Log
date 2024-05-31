@@ -1,12 +1,15 @@
 <?php
 session_start();
 
-// Check if necessary session variables are set
 if (!isset($_SESSION['firstname']) || !isset($_SESSION['lastname']) || !isset($_SESSION['studentnumber'])) {
     header("Location: register.php");
     exit();
 }
 
+$firstname = htmlspecialchars($_SESSION['firstname']);
+$lastname = htmlspecialchars($_SESSION['lastname']);
+$studentnumber = htmlspecialchars($_SESSION['studentnumber']);
+$profilePicture = isset($_SESSION['profile_picture']) ? htmlspecialchars($_SESSION['profile_picture']) : 'default_userp.png';
 $servername = "localhost"; 
 $username = "root"; 
 $dbpassword = ""; // Use the correct password for the MySQL root user
@@ -22,7 +25,7 @@ if ($conn->connect_error) {
 
 // Fetch user data
 $studentnumber = $_SESSION['studentnumber'];
-$stmt = $conn->prepare("SELECT id, firstname, middlename, lastname, email, college, program, phonenumber, position, profile_picture FROM users WHERE studentnumber = ?");
+$stmt = $conn->prepare("SELECT firstname, middlename, lastname, email, college, program, phonenumber, position, profile_picture FROM users WHERE studentnumber = ?");
 $stmt->bind_param("s", $studentnumber);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -38,6 +41,7 @@ $conn->close();
 
 $profilePicture = $user['profile_picture'] ? htmlspecialchars($user['profile_picture']) : 'default_userp.png';
 
+// Pass user data to the HTML
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -162,7 +166,7 @@ $profilePicture = $user['profile_picture'] ? htmlspecialchars($user['profile_pic
     .profile-info h2 {
       margin: 0;
       font-size: 24px;
-      margin-top: -170px;
+      margin-top: -200px;
       color: white;
     }
 
@@ -170,8 +174,8 @@ $profilePicture = $user['profile_picture'] ? htmlspecialchars($user['profile_pic
       margin: 5px 0 0;
       font-size: 18px;
       font-weight: bold;
-      margin-top: -170px;
-      margin-left: -265px;
+      margin-top: -160px;
+      margin-left: -170px;
       color: white;
     }
 
@@ -239,20 +243,18 @@ $profilePicture = $user['profile_picture'] ? htmlspecialchars($user['profile_pic
         <div class="profile-info-container">
             <img src="<?php echo $profilePicture; ?>" alt="User Photo" class="profile-photo">
             <div class="profile-info">
-                <h2><?php echo htmlspecialchars($user['firstname']) . ' ' .  htmlspecialchars($user['lastname']); ?></h2>
-                <!-- Check if 'studentnumber' key exists before accessing it -->
-                
+            <h2><?php echo $firstname . " " . $lastname; ?></h2>
+                <p><?php echo $studentnumber; ?></p>
             </div>
         </div>
     </div>
-</div>
-<div class="profile-infovertwo">
+  </div>
+  <div class="profile-infovertwo">
     <p>Email: <?php echo htmlspecialchars($user['email']); ?></p>
     <p>Phone Number: <?php echo htmlspecialchars($user['phonenumber']); ?></p>
     <p>College/Department: <?php echo htmlspecialchars($user['college']); ?></p>
     <p>Program/Course: <?php echo htmlspecialchars($user['program']); ?></p>
-</div>
-
+  </div>
 
   <div class="edit-buttons">
     <a href="edit_profile.php" class="edit-profile-btn">Edit Profile</a>
