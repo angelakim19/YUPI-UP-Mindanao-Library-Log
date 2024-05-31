@@ -65,11 +65,8 @@ $result = $conn->query($sql);
     <div class="buttons2">
     <button type="submit" name="action" value="edit">Edit Selected</button>
     <button type="submit" name="action" value="delete">Delete Selected</button>
-    </div>
-
-    <div class="buttons3">
-    <button onclick="location.href='add_book.php'">Add Book Borrowed</button>
-    <input type="button" onclick="window.location.href='admin_dashboard.html'" value="Back to Admin Dashboard">
+    <button type="button" onclick="window.location.href='add_book.php'">Add Book Borrowed</button>
+    <button type="button" onclick="window.location.href='admin_dashboard.html'">Back to Admin Dashboard</button>
     </div>
 </form>
 </div>

@@ -1,3 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Area Reservations</title>
+    <style>
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+h2 {
+    color: #333;
+    text-align: center;
+    font-weight: bolder;
+}
+
+h3 {
+    color: #555;
+    margin-left: 50px;
+    color: black;
+}
+
+/* Table styles */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Button styles */
+button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+    background-color: darkgreen;
+}
+
+button:hover {
+    background-color: maroon;
+}
+
+/* Button container styles */
+.button-container {
+    margin-top: 20px;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button container styles */
+.button-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Button styles */
+.button-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 60px; 
+    transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: maroon;
+}
+
+/* Button specific styles */
+.button-container button:nth-of-type(1) {
+    background-color: #28a745; /* Green for Add New Reservation */
+}
+
+.button-container button:nth-of-type(2) {
+    background-color: #28a745; /* Yellow for Library Places */
+}
+
+.button-container button:nth-of-type(3) {
+    background-color: #28a745; /* Red for Admin Dashboard */
+}
+
+
+</style>
+
+</head>
+
+<body>
 <?php
 // Database connection parameters
 $servername = "localhost";
@@ -85,14 +203,15 @@ for ($i = 1; $i <= $numTables; $i++) {
     echo "</table><br>";
 }
 
-echo "<div><br><button onclick=\"window.location.href = 'add_museum_reservation.php'\">Add New Reservation</button></div>";
+echo "<div class='button-container'><br>";
+echo "<button onclick=\"window.location.href = 'add_museum_reservation.php'\">Add New Reservation</button>";
+echo "<button onclick=\"window.location.href = 'library_places.html'\">Library Places</button>";
+echo "<button onclick=\"window.location.href = 'admin_dashboard.html'\">Admin Dashboard</button>";
+echo "</div>";
 
-echo "<div><br><button onclick=\"window.location.href = 'library_places.html'\">Library Places</button> 
-
-<button onclick=\"window.location.href = 'admin_dashboard.html'\">Admin Dashboard</button>
-
-</div>";
 
 // Close connection
 $conn->close();
 ?>
+</body>
+</html>

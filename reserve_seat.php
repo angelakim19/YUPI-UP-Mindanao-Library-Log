@@ -501,7 +501,7 @@ $conn->close();
         .modal {
             display: none; /* Hidden by default */
             position: fixed; /* Stay in place */
-            z-index: 20; /* Sit on top of other elements */
+            z-index: 100; /* Sit on top of other elements */
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%); /* Center the modal */
@@ -541,7 +541,7 @@ $conn->close();
             </div>
             <nav>
                 <ul style="list-style: none; padding: 0; margin: 0; display: flex;">
-                    <li class="about-us"><a href="#" id="about-us-link">ABOUT US</a></li>
+                    <li class="about-us"><a href="aboutus.html" id="about-us-link">About Us</a></li>
                     <li><img src="default_userp.png" alt="User Photo" class="user-photo" id="user-photo"></li>
                 </ul>
             </nav>
@@ -555,8 +555,8 @@ $conn->close();
                     <div class="profile-info-container" style="display: flex; align-items: center; justify-content: left; padding-left: 20px;">
                         <img src="default_userp.png" alt="User Photo" class="profile-photo">
                         <div class="profile-info">
-                <div style="font-size: 24px; font-weight: bold; color: black;"><?= htmlspecialchars($firstname . " " . $lastname) ?></div>
-                <div style="font-size: 18px; color: black;"><?= htmlspecialchars($studentnumber) ?></div>
+                <div style="font-size: 24px; font-weight: bold; margin-top:120px;color:white;"><?= htmlspecialchars($firstname . " " . $lastname) ?></div>
+                <div style="font-size: 18px; color: white;"><?= htmlspecialchars($studentnumber) ?></div>
                         </div>
                     </div>
                 </div>
